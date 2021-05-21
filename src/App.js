@@ -70,9 +70,7 @@ function App() {
         <div label="REGISTER">
           <Dashboard />
         </div>
-        <div label="LOGIN">
-          <Dashboard />
-        </div>
+
         <div label="CATCH">
           <div className="app-wrapper">
             <header>

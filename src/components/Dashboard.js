@@ -1,41 +1,38 @@
 import React, { Component } from 'react'
-import Modal from './RegisterModal'
+import '../css/register.css'
+import { useState } from 'react'
 
-class Dashboard extends Component {
-    constructor() {
-        super();
-        this.state = {
-            show: false
-        };
-        this.showModal = this.showModal.bind(this);
-        this.hideModal = this.hideModal.bind(this);
-    }
-
-    showModal = () => {
-        this.setState({ show: true })
-    }
-
-    hideModal = () => {
-        this.setState({ show: false})
-    }
+export default class Dashboard extends Component {
+    const [ name, setName ] = useState('')
+    const [ password, setPassword ] = useState('')
 
     render () {
         return (
-            <div>
-                <Modal show={this.state.show} handleClose={this.hideModal}>
-                    <h5>Register below:</h5>
-                    <form action="auth" method="POST" className="register">
-                        <input type="text" name="username" placeholder="Username"/>
-                        <input type="password" name="password" placeholder="Password"/>
-                        <input type="submit" placeholder="Register"/>
-                    </form>
-                </Modal>
-                <button type="button" onClick={this.showModal}>
-                    Join today!
-                </button>
+            <div className="register">
+                <h5>Join Pokewrex!</h5>
+                <form action="auth" method="POST" className="register">
+                    <input type="text" name="username" placeholder="Username"/>
+                    <input type="password" name="password" placeholder="Password"/>
+                    <button type="submit">Register</button>
+                </form>
             </div>
         )
     }
 }
 
-export default Dashboard;
+    // constructor() {
+    //     super();
+    //     this.state = {
+    //         show: false
+    //     };
+    //     this.showModal = this.showModal.bind(this);
+    //     this.hideModal = this.hideModal.bind(this);
+    // }
+    //
+    // showModal = () => {
+    //     this.setState({ show: true })
+    // }
+    //
+    // hideModal = () => {
+    //     this.setState({ show: false})
+    // }
