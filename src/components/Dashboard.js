@@ -3,8 +3,8 @@ import '../css/register.css'
 import { useState } from 'react'
 
 export default class Dashboard extends Component {
-    const [ name, setName ] = useState('')
-    const [ password, setPassword ] = useState('')
+    // const [ name, setName ] = useState('')
+    // const [ password, setPassword ] = useState('')
 
     render () {
         return (
